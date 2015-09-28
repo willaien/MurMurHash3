@@ -12,12 +12,12 @@ namespace MurMur3Hash
         const uint C2 = 0xab0e9789;
         const uint C3 = 0x38b34ae5;
         const uint C4 = 0xa1e38b93;
-        public static byte[] ComputeHash32(byte[] input)
+        public static byte[] ComputeHashx86_128(byte[] input)
         {
-            return ComputeHash32Impl(input);
+            return ComputeHashx86_128Impl(input);
         }
 
-        private static unsafe byte[] ComputeHash32Impl(byte[] input)
+        private static unsafe byte[] ComputeHashx86_128Impl(byte[] input)
         {
             fixed (byte* data = input)
             {
